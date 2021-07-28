@@ -1124,7 +1124,6 @@
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = objcimageinfo;
-				SDKROOT = macosx.internal;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1152,7 +1151,6 @@
 				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				PRODUCT_NAME = objcimageinfo;
-				SDKROOT = macosx.internal;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1180,7 +1178,6 @@
 				);
 				INSTALL_PATH = "$(DT_VARIANT)/$(TOOLCHAIN_INSTALL_DIR)/usr/local/bin";
 				PRODUCT_NAME = objcimageinfo;
-				SDKROOT = macosx.internal;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1253,7 +1250,6 @@
 					"-Wl,-stack_size,0x10000000",
 				);
 				PRODUCT_NAME = ld;
-				SDKROOT = macosx.internal;
 				SECTORDER_FLAGS = "";
 				TOOLCHAINS = osx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1330,7 +1326,6 @@
 					"-Wl,-stack_size,0x01000000",
 				);
 				PRODUCT_NAME = ld;
-				SDKROOT = macosx.internal;
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
@@ -1378,7 +1373,6 @@
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ObjectDump;
-				SDKROOT = macosx.internal;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1414,7 +1408,6 @@
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ObjectDump;
-				SDKROOT = macosx.internal;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1462,7 +1455,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1503,7 +1496,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1564,7 +1557,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = "Release-assert";
 		};
@@ -1644,7 +1637,6 @@
 					"-Wl,-stack_size,0x01000000",
 				);
 				PRODUCT_NAME = ld;
-				SDKROOT = macosx.internal;
 				SECTORDER_FLAGS = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
@@ -1680,7 +1672,6 @@
 					"-Wl,-exported_symbol,__mh_execute_header",
 				);
 				PRODUCT_NAME = unwinddump;
-				SDKROOT = macosx.internal;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 			};
@@ -1713,7 +1704,6 @@
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ObjectDump;
-				SDKROOT = macosx.internal;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1740,7 +1730,6 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = machocheck;
-				SDKROOT = macosx.internal;
 			};
 			name = "Release-assert";
 		};
@@ -1762,7 +1751,6 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = dyldinfo;
-				SDKROOT = macosx.internal;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 				ZERO_LINK = NO;
@@ -1881,7 +1869,6 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = unwinddump;
-				SDKROOT = macosx.internal;
 			};
 			name = Debug;
 		};
@@ -1905,7 +1892,6 @@
 				);
 				OTHER_LDFLAGS = "-Wl,-exported_symbol,__mh_execute_header";
 				PRODUCT_NAME = unwinddump;
-				SDKROOT = macosx.internal;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 			};
@@ -1940,7 +1926,6 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = dyldinfo;
-				SDKROOT = macosx.internal;
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -1963,7 +1948,6 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = dyldinfo;
-				SDKROOT = macosx.internal;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 				ZERO_LINK = NO;
@@ -1988,7 +1972,6 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = machocheck;
-				SDKROOT = macosx.internal;
 			};
 			name = Debug;
 		};
@@ -2010,7 +1993,6 @@
 				);
 				OTHER_LDFLAGS = "-stdlib=libc++";
 				PRODUCT_NAME = machocheck;
-				SDKROOT = macosx.internal;
 			};
 			name = Release;
 		};
