@@ -64,17 +64,17 @@ namespace lto {
 // magic to place command line in crash reports
 const int crashreporterBufferSize = 2000;
 static char crashreporterBuffer[crashreporterBufferSize];
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
-	#include <CrashReporterClient.h>
-	// hack until ld does not need to build on 10.6 anymore
-    struct crashreporter_annotations_t gCRAnnotations 
-        __attribute__((section("__DATA," CRASHREPORTER_ANNOTATIONS_SECTION))) 
-        = { CRASHREPORTER_ANNOTATIONS_VERSION, 0, 0, 0, 0, 0, 0 };
-#else
+//#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
+//	#include <CrashReporterClient.h>
+//	// hack until ld does not need to build on 10.6 anymore
+//    struct crashreporter_annotations_t gCRAnnotations
+//        __attribute__((section("__DATA," CRASHREPORTER_ANNOTATIONS_SECTION)))
+//        = { CRASHREPORTER_ANNOTATIONS_VERSION, 0, 0, 0, 0, 0, 0 };
+//#else
 	extern "C" char* __crashreporter_info__;
 	__attribute__((used)) 
 	char* __crashreporter_info__ = crashreporterBuffer;
-#endif
+//#endif
 
 
 static bool			sEmitWarnings = true;
@@ -6406,9 +6406,9 @@ void Options::checkForClassic(int argc, const char* argv[])
 	bool newLinker = false;
 	
 	// build command line buffer in case ld crashes
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
-	CRSetCrashLogMessage(crashreporterBuffer);
-#endif
+//#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
+//	CRSetCrashLogMessage(crashreporterBuffer);
+//#endif
 	const char* srcRoot = getenv("SRCROOT");
 	if ( srcRoot != NULL ) {
 		strlcpy(crashreporterBuffer, "SRCROOT=", crashreporterBufferSize);
